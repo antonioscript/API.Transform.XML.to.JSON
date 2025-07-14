@@ -20,7 +20,7 @@ public class ExcelController : ControllerBase
         if (file == null || file.Length == 0)
             return BadRequest("Arquivo Excel não enviado.");
 
-        var result = _parser.ParseXLS(file);
+        var result = _parser.ParseAllSheets(file);
         return Ok(result);
     }
 }
