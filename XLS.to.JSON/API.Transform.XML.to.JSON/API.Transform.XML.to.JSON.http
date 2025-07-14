@@ -1,0 +1,6 @@
+@API.Transform.XML.to.JSON_HostAddress = http://localhost:5204
+
+GET {{API.Transform.XML.to.JSON_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
