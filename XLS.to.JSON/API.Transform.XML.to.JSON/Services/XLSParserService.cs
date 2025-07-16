@@ -62,7 +62,8 @@ public class XLSParserService : IXLSParserService
                 var dict = new Dictionary<string, object>();
                 foreach (DataColumn col in table.Columns)
                 {
-                    dict[col.ColumnName] = row[col];
+                    dict[col.ColumnName] = row.IsNull(col) ? null : row[col]; //Aqui ele coloca null
+
                 }
                 rows.Add(dict);
             }
